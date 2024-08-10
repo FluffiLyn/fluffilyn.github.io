@@ -25,7 +25,7 @@
 <meta property="og:description" content="Chapter 2: Algorithm Analysis 2.1 Mathematical Background Four Defenitions Following are notations for calculating relative rates of growth（相对增长率）. \(T(N) &#x3D;\)  \(O(f(N)):\space\le\) \(\Omega(g">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-08-10T10:47:51.000Z">
-<meta property="article:modified_time" content="2024-08-10T14:48:42.448Z">
+<meta property="article:modified_time" content="2024-08-10T14:51:52.359Z">
 <meta property="article:author" content="FluffiLyn">
 <meta property="article:tag" content="Data_Structure_And_Algorithm">
 <meta name="twitter:card" content="summary">
@@ -139,7 +139,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~4.14K
+                            ~4.15K
                         
                         字
                     </li>
@@ -151,7 +151,7 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1723301322448"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1723301512359"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
@@ -274,11 +274,14 @@ time</h3>
 class="math inline">\(O(logN)\)</span> if it takes constant time <span
 class="math inline">\((O(1))\)</span> to cut the problem size by a
 fraction (usually <span class="math inline">\(\frac{1}{2}\)</span>).</p>
-<p>Examples: #### 1. Binary search (二分查找): Given an integer <span
+<p>Examples:</p>
+<h4
+id="binary-search-二分查找-given-an-integer-x-and-integers-a_0a_1...a_n-1-which-are-presorted-and-already-in-memory-find-i-such-that-a_i-x-or-return--1-if-x-is-not-in-the-input.">1.
+Binary search (二分查找): Given an integer <span
 class="math inline">\(X\)</span> and integers <span
 class="math inline">\(A_0,A_1,...,A_{n-1}\)</span>, which are presorted
 and already in memory, find i such that <span class="math inline">\(A_i
-= X\)</span>, or return -1 if X is not in the input.</p>
+= X\)</span>, or return -1 if X is not in the input.</h4>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Comparable&gt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">binarySearch</span><span class="params">(<span class="type">const</span> vector&lt;Comparable&gt; &amp;a, <span class="type">const</span> Comparable &amp;x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> low = <span class="number">0</span>, high = a.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (low &lt;= high)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> mid = (low + high) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (a[mid] &lt; x)</span><br><span class="line">            low = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (a[mid] &gt; x)</span><br><span class="line">            high = mid - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Binary search supports the <strong>contains</strong> operation in
@@ -288,7 +291,10 @@ operations require <span class="math inline">\(O(N)\)</span> time.</li>
 <h4 id="euclids-algorithm-欧几里得算法">2. Euclid's algorithm
 (欧几里得算法)</h4>
 <ul>
-<li>gcd: The greatest common divisor <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">gcd</span><span class="params">(<span class="type">long</span> <span class="type">long</span> m, <span class="type">long</span> <span class="type">long</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(n != <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> rem = m % n;</span><br><span class="line">        m = n;</span><br><span class="line">        n = rem;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> m</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>gcd: The greatest common divisor</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">gcd</span><span class="params">(<span class="type">long</span> <span class="type">long</span> m, <span class="type">long</span> <span class="type">long</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(n != <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> rem = m % n;</span><br><span class="line">        m = n;</span><br><span class="line">        n = rem;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> m</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
 <li><span class="math inline">\(T(N) = 2logN = O(logN)\)</span></li>
 </ul>
 <p><strong>Theorem 2.1:</strong> If <span class="math inline">\(M &gt;
@@ -401,7 +407,7 @@ Following are notations for calculating...`;
                     <a class="tag-none-link" href="/tags/Data-Structure-And-Algorithm/" rel="tag">Data_Structure_And_Algorithm</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-08-10T14:48:42.448Z" itemprop="dateModified">最后编辑：2024-08-10</time>
+                    <time datetime="2024-08-10T14:51:52.359Z" itemprop="dateModified">最后编辑：2024-08-10</time>
                 </div>
             </div>
         </footer>
