@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: View my blog
-      link: /Blogs/前言W
+      link: /Blogs/前言
     - theme: alt
       text: Markdown Examples
       link: /Usage_Examples/markdown-examples
