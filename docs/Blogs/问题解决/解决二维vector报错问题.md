@@ -20,17 +20,7 @@ A space is required between consecutive right angle brackets (use '> >') (fix av
 
 # 解决方法
 ## 1、修改检查规则
-我使用了clangd作为我的代码检查工具，所以我需要修改clangd的配置文件，将c++标准版本调整为c++11及以上。
-
-打开settings.json文件，添加如下配置：
-```
-"clangd.arguments": ["-std=c++11"]
-```
-即可将检查器的c++标准版本调整为c++11。
-
-如果输入了多个标准，clangd会选择最后一个标准。
-
-保存后重启clangd即可。
+参考这篇文章：[macOS 下让 VSCode Clangd 识别 C++11 语法](https://zhuanlan.zhihu.com/p/670005031)
 ## 2、修改编译器的c++标准版本
 打开code runner的settings文件，找到`code-runner.executorMap`，找到如下配置：
 ```
