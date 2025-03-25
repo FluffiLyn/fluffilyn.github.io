@@ -14,18 +14,4 @@ hero:
     - theme: brand
       text: View my blog
       link: /Blogs/前言
-    - theme: alt
-      text: Markdown Examples
-      link: /Usage_Examples/markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /Usage_Examples/api-examples
-
-features:
-  - title: Feature A
-    details: bruhA
-  - title: Feature B
-    details: BruhB
-  - title: Feature C
-    details: BruhC
 ---
