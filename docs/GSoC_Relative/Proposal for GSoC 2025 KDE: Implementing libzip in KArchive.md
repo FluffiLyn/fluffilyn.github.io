@@ -6,13 +6,13 @@ KArchive provides classes for easy reading, creation and manipulation of "archiv
 Current implementation for handling zip files uses non-standard logic to read zip files, so it gets confused when it finds token markers in what it is actual compressed data. This leads to issues like [bug 450597](https://bugs.kde.org/show_bug.cgi?id=450597).
 
 ### Project Goals
-1. Rewrite the existing implementation in kzip.cpp using libzip:
+1. **Rewrite the existing implementation in kzip.cpp using libzip:**
   * Support for all existing kzip features
   * Add new features like support for encrypted zip files（optional）
-2. Add new tests on kzip.cpp to ensure no regressions:
+2. **Add new tests on kzip.cpp to ensure no regressions:**
   * Basic operations
   * Edge cases
-3. Document the new implementation:
+3. **Document the new implementation:**
   * API documentation
   * Migration guide for applications using KArchive
 
@@ -37,10 +37,10 @@ Various refined features will be implemented as follows:
 
 ## About Me
 ### Contact Information
-**Name**: Jimmy Lin
-**Email**: fluffilyn114514@gmail.com
-**Major**: Software Engineering
-**Timezone**: Shanghai, China (GMT+8)
+* **Name**: Jimmy Lin
+* **Email**: fluffilyn114514@gmail.com
+* **Major**: Software Engineering
+* **Timezone**: Shanghai, China (GMT+8)
 
 ### Education & Background
 I am a student at the South China University of Technology, majoring in Software Engineering. I have two years of experience in using C++ and Linux. Love code, love technology and the spirit of open source, spend many hours a week learning C++ and relevant technologies. I am enthusiastic to contribute to KDE and be a part of the community. 
