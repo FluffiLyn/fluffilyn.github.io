@@ -8,7 +8,7 @@ Current implementation for handling zip files uses non-standard logic to read zi
 ### Project Goals
 1. **Rewrite the existing implementation in kzip.cpp using libzip:**
   * Support for all existing kzip features
-  * Add new features like support for encrypted zip files（optional）
+  * Add new features but not beyond the scope of libzip 
 2. **Add new tests on kzip.cpp to ensure no regressions:**
   * Basic operations
   * Edge cases
@@ -17,8 +17,6 @@ Current implementation for handling zip files uses non-standard logic to read zi
   * Migration guide for applications using KArchive
 
 ### Implementation & Deliverables (todo)
-Various refined features will be implemented as follows:
-
 1. Encapsulate libzip in a new class to provide a clean interface, and implement all existing features in kzip.cpp.
   * (todo)
 
@@ -39,16 +37,17 @@ Various refined features will be implemented as follows:
 ### Contact Information
 * **Name**: Jimmy Lin
 * **Email**: fluffilyn114514@gmail.com
+* **University**: South China University of Technology
 * **Major**: Software Engineering
-* **Timezone**: Shanghai, China (GMT+8)
+* **Location** : Guangzhou, Guangdong
+* **Timezone**: GMT+8
 
 ### Education & Background
-I am a student at the South China University of Technology, majoring in Software Engineering. I have two years of experience in using C++ and Linux. Love code, love technology and the spirit of open source, spend many hours a week learning C++ and relevant technologies. I am enthusiastic to contribute to KDE and be a part of the community. 
+I have two years of experience in using C++ and Linux. Love code, love technology and the spirit of open source, spend many hours a week learning C++ and relevant technologies. I am enthusiastic to contribute to KDE and be a part of the community. 
 
-### Contributions to KDE
+### Open Source Experience
 * [framework/KArchive MR !102](https://invent.kde.org/frameworks/karchive/-/merge_requests/102)
   *  Reference: Albert Astals Cid aacid@kde.org
-
 
 ### Others
 #### 1. Are you submitting proposals to other organizations, and whether or not you would choose KDE if given the choice?
@@ -62,3 +61,7 @@ Yes, I am comfortable. I will work with my mentor to track my work by daily comm
 #### 3. If your native language is not English, are you comfortable working closely with a supervisor whose native language is English? What is your native language, as that may help us find a mentor who has the same native language?
 
 Sure, I am comfortable. My native language is Chinese.
+
+#### 4. Do you have any other commitments during GSoC?
+
+Yes, I have final exams from mid June to early July. But after that I will fully devote myself to GSoC. 
